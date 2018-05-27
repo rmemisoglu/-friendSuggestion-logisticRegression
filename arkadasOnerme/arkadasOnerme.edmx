@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ogrenciDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ogrenciAd">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ogrenciNo" Type="bigint" />
+          <Property Name="ogrenciAd" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ogrenciNetwork">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ogrenciNo" Type="bigint" />
+          <Property Name="a1" Type="bigint" />
+          <Property Name="a2" Type="bigint" />
+          <Property Name="a3" Type="bigint" />
+          <Property Name="a4" Type="bigint" />
+          <Property Name="a5" Type="bigint" />
+          <Property Name="a6" Type="bigint" />
+          <Property Name="a7" Type="bigint" />
+          <Property Name="a8" Type="bigint" />
+          <Property Name="a9" Type="bigint" />
+          <Property Name="a10" Type="bigint" />
+        </EntityType>
+        <EntityType Name="ogrenciProfil">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ogrenciNo" Type="bigint" />
+          <Property Name="sinema" Type="int" />
+          <Property Name="yabanciDizi" Type="int" />
+          <Property Name="yabanciMuzik" Type="int" />
+          <Property Name="halkMuzik" Type="int" />
+          <Property Name="metalMuzik" Type="int" />
+          <Property Name="futbol" Type="int" />
+          <Property Name="basketbol" Type="int" />
+          <Property Name="romanOkuma" Type="int" />
+          <Property Name="siirOkuma" Type="int" />
+          <Property Name="bilgisayarOyunu" Type="int" />
+          <Property Name="sosyalMedya" Type="int" />
+          <Property Name="sansOyunu" Type="int" />
+          <Property Name="siirYazma" Type="int" />
+          <Property Name="zekaOyunu" Type="int" />
+          <Property Name="enstrüman" Type="int" />
+          <Property Name="labels" Type="int" />
+        </EntityType>
+        <EntityContainer Name="ogrenciDatabaseModelStoreContainer">
+          <EntitySet Name="ogrenciAd" EntityType="Self.ogrenciAd" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ogrenciNetwork" EntityType="Self.ogrenciNetwork" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ogrenciProfil" EntityType="Self.ogrenciProfil" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ogrenciDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ogrenciNetwork">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ogrenciNo" Type="Int64" />
+          <Property Name="a1" Type="Int64" />
+          <Property Name="a2" Type="Int64" />
+          <Property Name="a3" Type="Int64" />
+          <Property Name="a4" Type="Int64" />
+          <Property Name="a5" Type="Int64" />
+          <Property Name="a6" Type="Int64" />
+          <Property Name="a7" Type="Int64" />
+          <Property Name="a8" Type="Int64" />
+          <Property Name="a9" Type="Int64" />
+          <Property Name="a10" Type="Int64" />
+        </EntityType>
+        <EntityType Name="ogrenciProfil">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ogrenciNo" Type="Int64" />
+          <Property Name="sinema" Type="Int32" />
+          <Property Name="yabanciDizi" Type="Int32" />
+          <Property Name="yabanciMuzik" Type="Int32" />
+          <Property Name="halkMuzik" Type="Int32" />
+          <Property Name="metalMuzik" Type="Int32" />
+          <Property Name="futbol" Type="Int32" />
+          <Property Name="basketbol" Type="Int32" />
+          <Property Name="romanOkuma" Type="Int32" />
+          <Property Name="siirOkuma" Type="Int32" />
+          <Property Name="bilgisayarOyunu" Type="Int32" />
+          <Property Name="sosyalMedya" Type="Int32" />
+          <Property Name="sansOyunu" Type="Int32" />
+          <Property Name="siirYazma" Type="Int32" />
+          <Property Name="zekaOyunu" Type="Int32" />
+          <Property Name="enstrüman" Type="Int32" />
+          <Property Name="labels" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="arkadasOnerme" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ogrenciNetworks" EntityType="Self.ogrenciNetwork" />
+          <EntitySet Name="ogrenciProfils" EntityType="Self.ogrenciProfil" />
+          <EntitySet Name="ogrenciAds" EntityType="ogrenciDatabaseModel.ogrenciAd" />
+        </EntityContainer>
+        <EntityType Name="ogrenciAd">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ogrenciNo" Type="Int64" />
+          <Property Name="ogrenciAd1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ogrenciDatabaseModelStoreContainer" CdmEntityContainer="arkadasOnerme">
+          <EntitySetMapping Name="ogrenciNetworks">
+            <EntityTypeMapping TypeName="ogrenciDatabaseModel.ogrenciNetwork">
+              <MappingFragment StoreEntitySet="ogrenciNetwork">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ogrenciNo" ColumnName="ogrenciNo" />
+                <ScalarProperty Name="a1" ColumnName="a1" />
+                <ScalarProperty Name="a2" ColumnName="a2" />
+                <ScalarProperty Name="a3" ColumnName="a3" />
+                <ScalarProperty Name="a4" ColumnName="a4" />
+                <ScalarProperty Name="a5" ColumnName="a5" />
+                <ScalarProperty Name="a6" ColumnName="a6" />
+                <ScalarProperty Name="a7" ColumnName="a7" />
+                <ScalarProperty Name="a8" ColumnName="a8" />
+                <ScalarProperty Name="a9" ColumnName="a9" />
+                <ScalarProperty Name="a10" ColumnName="a10" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ogrenciProfils">
+            <EntityTypeMapping TypeName="ogrenciDatabaseModel.ogrenciProfil">
+              <MappingFragment StoreEntitySet="ogrenciProfil">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ogrenciNo" ColumnName="ogrenciNo" />
+                <ScalarProperty Name="sinema" ColumnName="sinema" />
+                <ScalarProperty Name="yabanciDizi" ColumnName="yabanciDizi" />
+                <ScalarProperty Name="yabanciMuzik" ColumnName="yabanciMuzik" />
+                <ScalarProperty Name="halkMuzik" ColumnName="halkMuzik" />
+                <ScalarProperty Name="metalMuzik" ColumnName="metalMuzik" />
+                <ScalarProperty Name="futbol" ColumnName="futbol" />
+                <ScalarProperty Name="basketbol" ColumnName="basketbol" />
+                <ScalarProperty Name="romanOkuma" ColumnName="romanOkuma" />
+                <ScalarProperty Name="siirOkuma" ColumnName="siirOkuma" />
+                <ScalarProperty Name="bilgisayarOyunu" ColumnName="bilgisayarOyunu" />
+                <ScalarProperty Name="sosyalMedya" ColumnName="sosyalMedya" />
+                <ScalarProperty Name="sansOyunu" ColumnName="sansOyunu" />
+                <ScalarProperty Name="siirYazma" ColumnName="siirYazma" />
+                <ScalarProperty Name="zekaOyunu" ColumnName="zekaOyunu" />
+                <ScalarProperty Name="enstrüman" ColumnName="enstrüman" />
+                <ScalarProperty Name="labels" ColumnName="labels" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ogrenciAds">
+            <EntityTypeMapping TypeName="ogrenciDatabaseModel.ogrenciAd">
+              <MappingFragment StoreEntitySet="ogrenciAd">
+                <ScalarProperty Name="ogrenciAd1" ColumnName="ogrenciAd" />
+                <ScalarProperty Name="ogrenciNo" ColumnName="ogrenciNo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
