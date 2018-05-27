@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ogrenciDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ogrenciNetwork">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="ogrenciNo" Type="bigint" />
+    <Property Name="a1" Type="bigint" />
+    <Property Name="a2" Type="bigint" />
+    <Property Name="a3" Type="bigint" />
+    <Property Name="a4" Type="bigint" />
+    <Property Name="a5" Type="bigint" />
+    <Property Name="a6" Type="bigint" />
+    <Property Name="a7" Type="bigint" />
+    <Property Name="a8" Type="bigint" />
+    <Property Name="a9" Type="bigint" />
+    <Property Name="a10" Type="bigint" />
+  </EntityType>
+  <EntityType Name="ogrenciProfil">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="ogrenciNo" Type="bigint" />
+    <Property Name="sinema" Type="int" />
+    <Property Name="yabanciDizi" Type="int" />
+    <Property Name="yabanciMuzik" Type="int" />
+    <Property Name="halkMuzik" Type="int" />
+    <Property Name="metalMuzik" Type="int" />
+    <Property Name="futbol" Type="int" />
+    <Property Name="basketbol" Type="int" />
+    <Property Name="romanOkuma" Type="int" />
+    <Property Name="siirOkuma" Type="int" />
+    <Property Name="bilgisayarOyunu" Type="int" />
+    <Property Name="sosyalMedya" Type="int" />
+    <Property Name="sansOyunu" Type="int" />
+    <Property Name="siirYazma" Type="int" />
+    <Property Name="zekaOyunu" Type="int" />
+    <Property Name="enstrüman" Type="int" />
+    <Property Name="labels" Type="int" />
+  </EntityType>
+  <EntityContainer Name="ogrenciDatabaseModelStoreContainer">
+    <EntitySet Name="ogrenciNetwork" EntityType="Self.ogrenciNetwork" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ogrenciProfil" EntityType="Self.ogrenciProfil" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ogrenciDatabaseModelStoreContainer" CdmEntityContainer="ogrenciDatabaseEntities">
+    <EntitySetMapping Name="ogrenciNetworks">
+      <EntityTypeMapping TypeName="ogrenciDatabaseModel.ogrenciNetwork">
+        <MappingFragment StoreEntitySet="ogrenciNetwork">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ogrenciNo" ColumnName="ogrenciNo" />
+          <ScalarProperty Name="a1" ColumnName="a1" />
+          <ScalarProperty Name="a2" ColumnName="a2" />
+          <ScalarProperty Name="a3" ColumnName="a3" />
+          <ScalarProperty Name="a4" ColumnName="a4" />
+          <ScalarProperty Name="a5" ColumnName="a5" />
+          <ScalarProperty Name="a6" ColumnName="a6" />
+          <ScalarProperty Name="a7" ColumnName="a7" />
+          <ScalarProperty Name="a8" ColumnName="a8" />
+          <ScalarProperty Name="a9" ColumnName="a9" />
+          <ScalarProperty Name="a10" ColumnName="a10" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ogrenciProfils">
+      <EntityTypeMapping TypeName="ogrenciDatabaseModel.ogrenciProfil">
+        <MappingFragment StoreEntitySet="ogrenciProfil">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ogrenciNo" ColumnName="ogrenciNo" />
+          <ScalarProperty Name="sinema" ColumnName="sinema" />
+          <ScalarProperty Name="yabanciDizi" ColumnName="yabanciDizi" />
+          <ScalarProperty Name="yabanciMuzik" ColumnName="yabanciMuzik" />
+          <ScalarProperty Name="halkMuzik" ColumnName="halkMuzik" />
+          <ScalarProperty Name="metalMuzik" ColumnName="metalMuzik" />
+          <ScalarProperty Name="futbol" ColumnName="futbol" />
+          <ScalarProperty Name="basketbol" ColumnName="basketbol" />
+          <ScalarProperty Name="romanOkuma" ColumnName="romanOkuma" />
+          <ScalarProperty Name="siirOkuma" ColumnName="siirOkuma" />
+          <ScalarProperty Name="bilgisayarOyunu" ColumnName="bilgisayarOyunu" />
+          <ScalarProperty Name="sosyalMedya" ColumnName="sosyalMedya" />
+          <ScalarProperty Name="sansOyunu" ColumnName="sansOyunu" />
+          <ScalarProperty Name="siirYazma" ColumnName="siirYazma" />
+          <ScalarProperty Name="zekaOyunu" ColumnName="zekaOyunu" />
+          <ScalarProperty Name="enstrüman" ColumnName="enstrüman" />
+          <ScalarProperty Name="labels" ColumnName="labels" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ogrenciDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ogrenciNetwork">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ogrenciNo" Type="Int64" />
+    <Property Name="a1" Type="Int64" />
+    <Property Name="a2" Type="Int64" />
+    <Property Name="a3" Type="Int64" />
+    <Property Name="a4" Type="Int64" />
+    <Property Name="a5" Type="Int64" />
+    <Property Name="a6" Type="Int64" />
+    <Property Name="a7" Type="Int64" />
+    <Property Name="a8" Type="Int64" />
+    <Property Name="a9" Type="Int64" />
+    <Property Name="a10" Type="Int64" />
+  </EntityType>
+  <EntityType Name="ogrenciProfil">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ogrenciNo" Type="Int64" />
+    <Property Name="sinema" Type="Int32" />
+    <Property Name="yabanciDizi" Type="Int32" />
+    <Property Name="yabanciMuzik" Type="Int32" />
+    <Property Name="halkMuzik" Type="Int32" />
+    <Property Name="metalMuzik" Type="Int32" />
+    <Property Name="futbol" Type="Int32" />
+    <Property Name="basketbol" Type="Int32" />
+    <Property Name="romanOkuma" Type="Int32" />
+    <Property Name="siirOkuma" Type="Int32" />
+    <Property Name="bilgisayarOyunu" Type="Int32" />
+    <Property Name="sosyalMedya" Type="Int32" />
+    <Property Name="sansOyunu" Type="Int32" />
+    <Property Name="siirYazma" Type="Int32" />
+    <Property Name="zekaOyunu" Type="Int32" />
+    <Property Name="enstrüman" Type="Int32" />
+    <Property Name="labels" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="arkadasOnerme" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ogrenciNetworks" EntityType="Self.ogrenciNetwork" />
+    <EntitySet Name="ogrenciProfils" EntityType="Self.ogrenciProfil" />
+    <EntitySet Name="ogrenciAds" EntityType="ogrenciDatabaseModel.ogrenciAd" />
+  </EntityContainer>
+  <EntityType Name="ogrenciAd">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ogrenciNo" Type="Int64" />
+    <Property Name="ogrenciAd1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>
